@@ -3,7 +3,7 @@
 [![NuGet](https://img.shields.io/nuget/v/Gameloop.Vdf.JsonConverter.svg?style=flat-square)](https://www.nuget.org/packages/Gameloop.Vdf.JsonConverter)
 [![AppVeyor](https://img.shields.io/appveyor/ci/Shravan2x/gameloop-vdf-jsonconverter.svg?maxAge=2592000&style=flat-square)](https://ci.appveyor.com/project/Shravan2x/gameloop-vdf-jsonconverter)
 
-VDF-JSON converters for Vdf.NET.
+VDF-JSON converters for [Vdf.NET](https://github.com/shravan2x/Gameloop.Vdf).
 
 ## Documentation
 
