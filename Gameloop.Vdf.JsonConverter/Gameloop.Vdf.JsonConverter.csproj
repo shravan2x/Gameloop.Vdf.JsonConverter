@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0;net45</TargetFrameworks>
+    <Description>VDF-JSON converters for Vdf.NET.</Description>
+    <Copyright>Copyright © Shravan Rajinikanth 2017</Copyright>
+    <Company>Gameloop</Company>
+    <Authors>Shravan Rajinikanth</Authors>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Vdf.NET JsonConverter</Title>
+    <PackageId>Gameloop.Vdf.JsonConverter</PackageId>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/shravan2x/Gameloop.Vdf.JsonConverter/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>vdf keyvalue steam json convert</PackageTags>
+    <RepositoryUrl>https://github.com/shravan2x/Gameloop.Vdf.JsonConverter</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/shravan2x/Gameloop.Vdf.JsonConverter</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.0\Gameloop.Vdf.JsonConverter.xml</DocumentationFile>
+    <DefineConstants>RELEASE</DefineConstants>
+    <NoWarn>1591;1701;1702;1705</NoWarn>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Gameloop.Vdf" Version="0.4.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
