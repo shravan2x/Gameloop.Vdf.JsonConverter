@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Gameloop.Vdf.Linq;
+using Newtonsoft.Json.Linq;
 using System;
 
 namespace Gameloop.Vdf.JsonConverter
