@@ -101,8 +101,14 @@ namespace Gameloop.Vdf.JsonConverter
     {
         private DuplicateKeyHandling _valueDuplicateKeyHandling = DuplicateKeyHandling.Throw;
 
+        /// <summary>
+        /// Sets duplicate key handling when the corresponding value is an object or list.
+        /// </summary>
         public DuplicateKeyHandling ObjectDuplicateKeyHandling { get; set; } = DuplicateKeyHandling.Throw;
 
+        /// <summary>
+        /// Sets duplicate key handling when the corresponding value is a singular value.
+        /// </summary>
         public DuplicateKeyHandling ValueDuplicateKeyHandling
         {
             get => _valueDuplicateKeyHandling;
@@ -119,9 +125,24 @@ namespace Gameloop.Vdf.JsonConverter
 
     public enum DuplicateKeyHandling
     {
+        /// <summary>
+        /// Ignores all duplicate keys after the first. Selecting this option will cause all duplicates to be discarded.
+        /// </summary>
         Ignore,
+
+        /// <summary>
+        /// Merges two JObjects or JArrays using the <see href="https://www.newtonsoft.com/json/help/html/MergeJson.htm">.Merge() method provided by Json.NET</see> with default settings.
+        /// </summary>
         Merge,
+
+        /// <summary>
+        /// Ignores all duplicate keys before the last. Selecting this option will cause all duplicates to be discarded.
+        /// </summary>
         Replace,
+
+        /// <summary>
+        /// Simply throws an exception when a duplicate key is encountered. This is the default behavior.
+        /// </summary>
         Throw
     }
 }
