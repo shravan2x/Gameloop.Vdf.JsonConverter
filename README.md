@@ -21,7 +21,7 @@ File.WriteAllText("importantInfo.json", volvo.ToJson());
 ```
 The `.ToJson()` and `.ToVdf()` extension methods are defined on all `VToken` and `JToken` instances respectively.
 
-#### How does the library handle duplicate keys when converting to JSON?
+#### Handling duplicate keys when converting to JSON
 
 Unlike VDF, the JSON format doesn't support duplicate keys in its objects. So this library allows adjusting duplicate key handling via the `ObjectDuplicateKeyHandling` and `ValueDuplicateKeyHandling` settings. They can be set when calling `.ToJson()` like
 ```c#
@@ -41,7 +41,7 @@ The different duplicate key handling options are:
 
 ## FAQ
 
-#### Why doesn't calling `someJsonObject.ToVdf().ToJson()` always return the original Json?
+#### Why doesn't calling `someJsonObject.ToVdf().ToJson()` always return the original JSON?
 
 This is because of the way some JSON elements are converted to VDF such as arrays and nulls.
 
