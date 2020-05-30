@@ -44,7 +44,7 @@ namespace Gameloop.Vdf.JsonConverter
 
             JObject resultObj = new JObject();
 
-            foreach (VProperty prop in obj.Children())
+            foreach (VProperty prop in obj.Properties())
             {
                 if (!resultObj.ContainsKey(prop.Key))
                     resultObj.Add(prop.ToJson(settings));
